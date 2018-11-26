@@ -1,0 +1,118 @@
+
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>tiiwa</title>
+    <link href="https://fonts.googleapis.com/css?family=Muli:400,700,900" rel="stylesheet">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+    <link href="cover.css" rel="stylesheet">
+  </head>
+
+  <body>
+    <nav class="navbar navbar-dark bg-dark">
+      <a class="navbar-brand">
+        <img src="assets/tiiwa-logo-white.svg" class="logo d-inline-block align-top" alt="tiiwa">
+      </a>
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSfAPs1-9v3D6-l_ENTD291Cn9qjHMBp0cE6LXpc4aZQBYS9Yg/viewform?usp=sf_link" target="_blank" class="btn btn-lg btn-secondary">Sign Up</a>
+    </nav>
+
+    <div class="intro container main">
+      <img src="assets/tiiwa-pattern.png" class="tiiwa-pattern">
+      <h1 class="cover-heading">Change<br>begins<br>with us.</h1>
+    </div>
+
+    <div class="detail">
+      <img src="assets/map.png" class="map">
+      <div class="wrapper">
+        <div class="vision">
+          <h2>Our Vision</h2><br>
+          <p>Inspiring and equiping Africans abroad to<br>address issues that affect African countries.</p>
+        </div>
+        <div class="container information">
+          <div class="row">
+            <div class="modes col-sm-12 col-md-12 col-lg-4 col-xl-4">
+              <h3>Meetups</h3>
+              <img src="assets/i.svg" class="i-accent">
+              <p>Bi-monthly meetups to discuss ideas related to Africa’s development.</p>
+            </div>
+            <div class="modes col-sm-12 col-md-12 col-lg-4 col-xl-4">
+              <h3>Labs</h3>
+              <img src="assets/i.svg" class="i-accent">
+              <p>Partnership with African social innovators to develop solutions.</p>
+            </div>
+            <div class="modes col-sm-12 col-md-12 col-lg-4 col-xl-4">
+              <h3>Conferences</h3>
+              <img src="assets/i.svg" class="i-accent">
+              <p>Annual conferences featuring innovative entrepreneurs from Africa.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div class="container main">
+        <img src="assets/pattern.svg" class="tiiwa-pattern footer-pattern">
+      </div>
+      <div class="footer-logo-corner">
+        <img src="assets/tiiwa-logo-white.svg" class="logo d-inline-block align-top" alt="tiiwa">
+        <p>copyright tiiwa 2018</p>
+      </div>
+      <div class="container social-media">
+        <a href="https://www.facebook.com/tiiwaafrica/" >
+          <img id="facebook" src="assets/facebook-logo.svg">
+        </a>
+        <a href="https://twitter.com/tiiwaafrica/" >
+          <img id="twitter" src="assets/twitter.svg">
+        </a>
+        <a href="https://www.instagram.com/tiiwaafrica/">
+          <img id="instagram" src="assets/instagram.svg">
+        </a>
+      </div>
+      <div class="footer-content">
+        <span id="bold-text">Be a part of the change.</span><br>
+        <span id="regular-text">Sign up to learn about tiiwa.</span><br>
+        <a id="footer-btn" href="https://docs.google.com/forms/d/e/1FAIpQLSfAPs1-9v3D6-l_ENTD291Cn9qjHMBp0cE6LXpc4aZQBYS9Yg/viewform?usp=sf_link" target="_blank" class="btn btn-lg btn-secondary">Sign Up</a>
+      </div>
+    </div>
+  </body>
+
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script type = "text/javascript" src = "https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.3/jquery-ui.min.js"></script>
+    <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script>
+      $(document).ready(function(){
+        var wrapperHeight = $('.wrapper').outerHeight();
+        var offsetTop = $('.wrapper').position().top;
+        var h = wrapperHeight + offsetTop;
+        console.log(offsetTop);
+        $('.detail').height(h);
+        window.dispatchEvent(new Event('resize'));
+
+        // $( ".cover-heading" ).hide();
+        // $(".tiiwa-pattern").hide().fadeIn("slow");
+        // $( ".cover-heading" ).show( "slide", {direction: "left" }, 1200 );
+      })
+      $( window ).resize(function() {
+        var wrapperHeight = $('.wrapper').outerHeight();
+        var offsetTop = $('.wrapper').position().top;
+        var h = wrapperHeight + offsetTop;
+        console.log(offsetTop);
+        $('.detail').height(h);
+      });
+    </script>
+  </body>
+</html>
