@@ -33,7 +33,7 @@ a:hover {
   color: white;
   padding-left: 2%;
   padding-right: 2%;
-  margin-left:1%;
+  /* margin-left:1%; */
   font-family: 'Muli', sans-serif;
   text-align: center;
   margin-right: 1rem;
@@ -71,8 +71,8 @@ body {
   /* height:100%; */
 }
 
-.main img{
-  opacity: 0.76;
+.intro img{
+  opacity: 0.55;
   max-height: 100%;
   width: 85vw;
 }
@@ -110,51 +110,96 @@ body {
     }
 }
 
-@media only screen and (max-width: 1024px) {
-   .cover-heading{
-      font-size: 110px;
-   }
+
+@media only screen and (max-width: 992px){
+  .unite-text{
+    display: none;
+  }
 }
 
-@media only screen and (max-width: 768px) {
-   .cover-heading{
-      font-size: 95px;
-   }
+
+/*----------------------------------------------*/
+.modal{
+  color:#36404C;
+  font-family: 'Muli', sans-serif;
+  font-weight:400;
+  text-align: center;
+}
+.modal-title{
+  font-weight: bold;
+  display: block;
+  font-size: 35px;
 }
 
-@media only screen and (max-width: 461px) {
-   .cover-heading{
-      font-size: 45px;
-      font-family: 'Muli', sans-serif;
-      position: absolute;
-      top: 17%;
-      left: 11%;
-   }
-   #footer-btn{
-     margin-top:2% !important;
-   }
-   .social-media{
-     bottom: 10% !important;
-   }
+.modal-content{
+  background-color: #FFFFFF;
 }
+
+.narrow{
+  width:70%;
+}
+
+.narrow p{
+  margin-top: 1%;
+  margin-bottom: 7%;
+}
+
+.form-control{
+  background-color:rgba(246, 246, 246, 0.44);
+  border:0.914609px solid rgba(0, 0, 0, 0.1);
+}
+
+.message textarea{
+  min-height: 7em;
+}
+.help-block{
+  color: red;
+  text-align: left;
+}
+.modal-footer{
+  border-top:none;
+  text-align: center;
+  display: block;
+  padding-top: 0;
+}
+
+.contact-btn,
+.contact-btn:hover,
+.contact-btn:focus{
+  background-color: #DF4E55;
+  border:none;
+  border-radius:34px;
+  width: 64%;
+  min-height: 6%;
+  font-size: 1em;
+  color: white;
+  padding-left: 7%;
+  padding-right: 7%;
+  padding-top: 1%;
+  padding-bottom: 1%;
+  text-align: center;
+  margin-bottom: 8%;
+}
+
+.modal-header{
+  border-bottom:none;
+}
+
+
+/*-----------------------------------------------*/
 
 .footer{
   /* background-color: #051220; */
-  height: 30vh;
+  height: 40vh;
   overflow: hidden;
   position:relative;
   font-family: 'Muli', sans-serif;
 }
 
-.footer-pattern{
-  /* height: 30vh;
-  width: 50vw; */
-}
-
 .footer-logo-corner{
   position: absolute;
   bottom: 1%;
-  left:1%;
+  left:2%;
 }
 
 .social-media{
@@ -163,10 +208,6 @@ body {
   right:3%;
   text-align:right;
   padding-bottom: 1%;
-}
-
-#twitter, #facebook{
-  padding-right: 1%;
 }
 
 .footer-content{
@@ -178,28 +219,221 @@ body {
 
 #bold-text{
   font-weight:900;
-  font-size:2vh;
-}
-
-#regular-text{
-
+  font-size:22px;
 }
 
 #footer-btn{
-  margin-top:10%;
+  margin-top:7%;
   padding-left: 10%;
   padding-right: 10%;
+}
+.footer-pattern{
+  opacity: 0.4 !important;
+  width: 85vw;
 }
 
 .contact-us{
   font-family: 'Muli', sans-serif;
   font-weight: 300;
   font-size: 1em;
-  margin-right:5%;
+  font-size:16px;
+  margin-right:11%;
+}
+
+.social-media{
+  right:5%;
+  bottom:8%;
+}
+
+#instagram{
+  width:10%;
+}
+
+#twitter, #facebook {
+  padding-right: 4%;
+  width: 15%;
+}
+#facebook{
+  width: 10%;
 }
 
 
+@media only screen and (max-width: 1023px) {
+   .cover-heading{
+      font-size: 110px;
+   }
+   #footer-btn {
+    margin-top: 2%;
+  }
+  #bold-text{
+    font-size: 16px;
+  }
+  #regular-text{
+    font-size:14px;
+  }
+  .footer-logo-corner p{
+    font-size:14px;
+  }
+  .social-media{
+    right:5%;
+    bottom:8%;
+  }
+  .contact-us{
+    font-size:16px;
+    margin-right:11%;
+  }
 
+  #instagram{
+    width:10%;
+  }
+
+  #twitter, #facebook {
+    padding-right: 4%;
+    width: 15%;
+  }
+  #facebook{
+    width: 10%;
+  }
+  .footer{
+    height:35vh;
+  }
+}
+
+
+@media only screen and (max-width: 768px) {
+   .cover-heading{
+      font-size: 95px;
+   }
+   .footer-content{
+         top: 12%;
+   }
+   #bold-text{
+   	font-size: 3vh;
+   }
+   #footer-btn {
+     margin-top: 4%;
+     padding-left: 10%;
+     padding-right: 10%;
+     padding-top: 2%;
+     padding-bottom: 2%;
+   }
+  .social-media{
+    bottom:10%;
+  }
+   #twitter, #facebook{
+     padding-right: 5%;
+     width: 15%;
+   }
+   #instagram{
+     width: 10%;
+   }
+   #facebook{
+     width:10%;
+   }
+   .contact-us{
+     margin-right: 11%;
+   }
+   .footer-logo-corner p {
+     font-size: 15px;
+   }
+   .footer-logo-corner{
+     left:2%;
+   }
+   .footer-pattern{
+     width: 80vw;
+   }
+   .footer{
+     height:35vh;
+   }
+}
+
+@media only screen and (max-width: 621px){
+  .cover-heading {
+      font-size: 69px;
+  }
+}
+
+@media only screen and (max-width: 461px) {
+   .cover-heading{
+      font-size: 45px;
+      font-family: 'Muli', sans-serif;
+      position: absolute;
+      top: 17%;
+      left: 11%;
+   }
+   #footer-btn{
+     margin-top:2% ;
+   }
+
+   .social-media{
+     bottom:15%;
+   }
+   .footer-logo-corner p {
+       font-size: 12px;
+   }
+   .contact-us{
+       font-size: 15px;
+   }
+   #twitter, #facebook {
+       padding-right: 2%;
+       width: 15%;
+   }
+   #facebook {
+       width: 8%;
+   }
+}
+
+@media only screen and (max-width: 380px) {
+  .footer-content{
+    top: 10%;
+    left: 12%;
+  }
+  #footer-btn{
+    margin-top:4% ;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+  .social-media{
+    right:8%;
+    bottom: 15%;
+  }
+  .footer-logo-corner{
+    left:5%;
+    bottom:2%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .footer-logo-corner p {
+      font-size: 7px;
+  }
+  .footer-logo-corner {
+      bottom:5%;
+  }
+  .social-media{
+    right:5%;
+    bottom:20%
+  }
+  #footer-btn {
+    margin-top: 5%;
+  }
+  #regular-text{
+    font-size: 12px;
+  }
+  #bold-text{
+    font-size: 14px;
+  }
+  .contact-us {
+    font-size: 12px;
+  }
+}
+
+@media only screen and (max-width: 330px){
+  .cover-heading {
+      font-size: 36px;
+  }
+}
 /*----------------------------------------------*/
 .detail{
   background-color: white;
@@ -214,26 +448,8 @@ body {
   max-width: 100%;
 }
 
- .wrapper{
-  position:absolute;
-  top:10%;
-  right:2%;
-  width:100%;
-}
-
  .vision{
   margin-right: 3%;
-}
-
-.information{
-  margin-top:3%;
-  margin-right: 2%;
-}
-
-@media only screen and (min-width: 1200px){
-  .information {
-      max-width: 2140px;
-  }
 }
 
 .detail  h3{
@@ -280,10 +496,6 @@ body {
 /*--------------------*/
 
 
-
-
-
-
 .navbar{
   background-color: #051220 !important;
 }
@@ -291,4 +503,12 @@ body {
 .logo{
   width:85px;
   height:40px;
+}
+
+.blk-icons{
+  width: 20%;
+  padding-right:4%;
+}
+.modal-social{
+  bottom: 2%;
 }

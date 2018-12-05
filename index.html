@@ -32,7 +32,7 @@
             <a class="nav-link" href="#what-we-do">What We Do</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Contact Us</a>
+            <a class="nav-link" href="#" data-toggle="modal" data-target=".bd-example-modal-lg">Contact Us</a>
           </li>
         </ul>
         <a href="https://docs.google.com/forms/d/e/1FAIpQLSfAPs1-9v3D6-l_ENTD291Cn9qjHMBp0cE6LXpc4aZQBYS9Yg/viewform?usp=sf_link" target="_blank" class="btn btn-lg btn-secondary">Sign Up</a>
@@ -42,6 +42,54 @@
     <div class="intro main">
       <img src="assets/tiiwa-pattern.png" class="tiiwa-pattern">
       <h1 class="cover-heading">Change<br>begins<br>with us.</h1>
+    </div>
+
+    <!-- Large modal -->
+    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+
+          <div class="modal-body">
+            <div class="container narrow">
+              <h5 class="modal-title" id="exampleModalLabel">Contact us</h5>
+              <p>This is some amazing text about how people can reach out to us</p>
+              <form id="contact-form"role="form" data-toggle="validator">
+                <div class="form-group name">
+                  <input type="text" class="form-control" id="name" placeholder="Name" required="required" data-error="Please enter your full name.">
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group email">
+                  <input type="text" class="form-control" id="email" placeholder="Email" required="required" data-error="Please enter a valid email.">
+                  <div class="help-block with-errors"></div>
+                </div>
+                <div class="form-group message">
+                  <textarea class="form-control" id="message" required="required" data-error="Please enter a message."></textarea>
+                  <div class="help-block with-errors"></div>
+                </div>
+              </form>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-primary contact-btn">Contact us</button><br>
+            <div class="social-media modal-social">
+              <a href="https://www.facebook.com/tiiwaafrica/" >
+                <img class="blk-icons" src="assets/facebook-blk-logo.svg">
+              </a>
+              <a href="https://twitter.com/tiiwaafrica/" >
+                <img class="blk-icons" src="assets/twitter-blk-logo.svg">
+              </a>
+              <a href="https://www.instagram.com/tiiwaafrica/">
+                <img class="blk-icons" src="assets/instagram-blk-logo.svg">
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
 
     <div class="detail">
@@ -66,7 +114,7 @@
           <h4>Our Vision</h4>
           <p>To put Africans at the forefront of Africa’s development.</p>
         </div>
-        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+        <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 unite-text">
           <div class="container">
             <span>Uniting Africans globally for Africa’s development.<span>
           </div>
@@ -108,15 +156,15 @@
     </div>
 
     <div class="footer">
-      <div class="container main">
-        <img src="assets/pattern.svg" class="tiiwa-pattern footer-pattern">
+      <div class="main">
+        <img src="assets/tiiwa-pattern.png" class="tiiwa-pattern footer-pattern">
       </div>
       <div class="footer-logo-corner">
         <img src="assets/tiiwa-logo-white.svg" class="logo d-inline-block align-top" alt="tiiwa">
         <p>copyright tiiwa 2018</p>
       </div>
-      <div class="container social-media">
-        <a href="#" class="contact-us">Contact Us</a>
+      <div class="social-media">
+        <a href="#" class="contact-us" data-toggle="modal" data-target=".bd-example-modal-lg">Contact Us</a>
         <a href="https://www.facebook.com/tiiwaafrica/" >
           <img id="facebook" src="assets/facebook-logo.svg">
         </a>
@@ -145,26 +193,20 @@
     <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js " integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <script src="bootstrap/js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/1000hz-bootstrap-validator/0.11.9/validator.min.js"></script>
     <script>
       $(document).ready(function(){
-        var wrapperHeight = $('.wrapper').outerHeight();
-        var offsetTop = $('.wrapper').position().top;
-        var h = wrapperHeight + offsetTop;
-        console.log(offsetTop);
-        $('.detail').height(h);
-        window.dispatchEvent(new Event('resize'));
+        $('#contact-form').validator();
 
-        // $( ".cover-heading" ).hide();
-        // $(".tiiwa-pattern").hide().fadeIn("slow");
-        // $( ".cover-heading" ).show( "slide", {direction: "left" }, 1200 );
+
+        $( ".contact-btn" ).click(function(e) {
+
+          if (!e.isDefaultPrevented()) {
+            alert( "Handler for .click() called." );
+          }
+
+        });
       })
-      $( window ).resize(function() {
-        var wrapperHeight = $('.wrapper').outerHeight();
-        var offsetTop = $('.wrapper').position().top;
-        var h = wrapperHeight + offsetTop;
-        console.log(offsetTop);
-        $('.detail').height(h);
-      });
     </script>
   </body>
 </html>
