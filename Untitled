@@ -1,0 +1,48 @@
+
+@media only screen and (max-width: 1440px)
+main{
+  text-align: -webkit-center;
+  width: 60%;
+  margin: 0% 6% 0% 6%;
+}
+
+@media only screen and (max-width: 768px)
+.cover-heading {
+    font-size: 81px;
+}
+
+
+ipad 768 x 1024
+
+@media only screen and (max-width: 1440px)
+.main {
+    width: 60%;
+    text-align: center;
+    /* margin: auto; */
+    margin: 0% 11% 0% 6%;
+    padding-bottom: 9%;
+}}
+
+.main img {
+opacity: 0.76;
+max-height: 100%;
+width: 88vw;
+
+}
+
+
+ipad pro 1024 x1366
+
+
+@media only screen and (max-width: 1440px)
+.main {
+    width: 60%;
+    text-align: center;
+    margin: 0% 0% 0% 12%;
+    padding-bottom: 9%;
+    }}
+
+
+iphone x 375x812
+
+add overflow:hidden to body
