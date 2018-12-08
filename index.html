@@ -57,7 +57,7 @@
           <div class="modal-body">
             <div class="container narrow">
               <h5 class="modal-title" id="exampleModalLabel">Contact us</h5>
-              <p>This is some amazing text about how people can reach out to us</p>
+              <p>Send us to a message and we'll get back to you.</p>
               <form id="contact-form"role="form" data-toggle="validator">
                 <div class="form-group name">
                   <input type="text" class="form-control" id="name" placeholder="Name" required="required" data-error="Please enter your full name.">
@@ -93,7 +93,7 @@
     </div>
 
     <div class="detail">
-      <img src="assets/map.png" class="map">
+      <!-- <img src="assets/map-new.png" class="map"> -->
       <div class="container row" id="who-we-are">
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
           <h3>Who are we</h3>
@@ -116,13 +116,14 @@
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6 unite-text">
           <div class="container">
-            <span>Uniting Africans globally for Africa’s development.<span>
+            <span>Uniting <br/>Africans globally for Africa’s development.<span>
           </div>
         </div>
       </div>
       <br>
       <div class="container row" id="what-we-do">
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
+          <br>
           <h3> What we do</h3>
           <img src="assets/header-bar.png" class="header-bar">
           <br>
@@ -138,6 +139,17 @@
             one entrepreneur based in Africa and another entrepreneur based abroad to share their ideas
             and provide actionable ways we can support their vision.
           </p>
+          <br>
+          <div class="next-meetup">
+            <p id="meetup-heading">Next<br/>Meetup</p>
+            <img src="assets/event-bar.png" class="event-bar">
+            <p id="meetup-details">
+              Saturday,<br/>December 8th 2018<br/>1:30pm<br/>
+              <a href="https://www.eventbrite.ca/e/tiiwa-meetup-tickets-52435203104" style="color:#DF4E55">Register for our next meetup</a>
+            </p>
+          </div>
+        <br>
+        <br>
         </div>
         <div class="col-sm-12 col-md-12 col-lg-6 col-xl-6">
           <h4>Labs</h4>
@@ -148,10 +160,6 @@
             spanning a period of 3 months. tiiwa Labs will be launching soon. Stay tuned.
           </p>
         </div>
-      </div>
-      <div class="container row next-meetup">
-        <div class="col"></div>
-        <div class="col"></div>
       </div>
     </div>
 
@@ -197,15 +205,16 @@
     <script>
       $(document).ready(function(){
         $('#contact-form').validator();
+        if (window.devicePixelRatio > 1) {
 
+          var lowresImages = $('.tiiwa-pattern');
+          lowresImages.each(function(i) {
+              var lowres = $(this).attr('src');
+              var highres = lowres.replace(".", "@2x.");
+              $(this).attr('src', highres);
 
-        $( ".contact-btn" ).click(function(e) {
-
-          if (!e.isDefaultPrevented()) {
-            alert( "Handler for .click() called." );
-          }
-
-        });
+          });
+        }
       })
     </script>
   </body>

@@ -49,6 +49,14 @@ nav{
   color:#ffffff !important;
 
 }
+.navbar{
+  background-color: #051220 !important;
+}
+
+.logo{
+  width:85px;
+  height:40px;
+}
 
 /*
  * Base structure
@@ -95,26 +103,12 @@ body {
     }
 }
 
-@media only screen and (max-width: 1440px) {
-    .cover-heading{
-      top:10%;
-      left:0%;
-      font-size: 110px;
-    }
-
-    .main{
-      width: 60%;
-      text-align: center;
-      margin-left:8%;
-      padding-bottom: 9%;
-    }
-}
 
 
-@media only screen and (max-width: 992px){
-  .unite-text{
-    display: none;
-  }
+
+
+.unite-text{
+  font-weight: 800;
 }
 
 
@@ -129,6 +123,10 @@ body {
   font-weight: bold;
   display: block;
   font-size: 35px;
+}
+.modal-header{
+  padding-bottom:0;
+  padding-top:0;
 }
 
 .modal-content{
@@ -155,6 +153,8 @@ body {
 .help-block{
   color: red;
   text-align: left;
+  font-size: small;
+  margin-top: 1%;
 }
 .modal-footer{
   border-top:none;
@@ -185,6 +185,14 @@ body {
   border-bottom:none;
 }
 
+@media only screen and (max-width: 992px){
+  .unite-text{
+    display: none;
+  }
+  .narrow{
+    width:100%;
+  }
+}
 
 /*-----------------------------------------------*/
 
@@ -238,6 +246,7 @@ body {
   font-size: 1em;
   font-size:16px;
   margin-right:11%;
+  vertical-align: middle;
 }
 
 .social-media{
@@ -257,19 +266,87 @@ body {
   width: 10%;
 }
 
+@media only screen and (max-width: 1440px) {
+    .cover-heading{
+      top: 20%;
+      left: 0%;
+      font-size: 9em;
+    }
+
+    .main{
+      width: 60%;
+      text-align: center;
+      margin-left:8%;
+      padding-bottom: 9%;
+    }
+    #bold-text{
+     font-size: 3vh;
+    }
+    #regular-text{
+      font-size:1.5em;
+    }
+    .contact-us, #footer-btn{
+      font-size:1.2em;
+    }
+    .footer-logo-corner{
+      bottom:3%;
+    }
+}
+
+@media only screen and (min-width:1441px){
+  .cover-heading{
+    font-size: 8vw;
+    left: 6%;
+    top: 18%;
+  }
+  #bold-text{
+    font-size: 2.5em;
+  }
+  #regular-text{
+    font-size:2em;
+  }
+  #footer-btn {
+    margin-top: 7%;
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    font-size: 1.5em;
+    border-radius: 54px;
+  }
+  .contact-us{
+    font-size: 1.5em !important;
+  }
+  .footer-logo-corner{
+    bottom: 2%;
+  }
+  .footer-logo-corner p{
+    font-size:1.5em;
+  }
+  .nav-item, .btn-secondary{
+    font-size:1.5em;
+  }
+  .logo {
+    width: 120px;
+    height: 50px;
+  }
+  .detail p{
+    font-size: 1.5em;
+  }
+}
 
 @media only screen and (max-width: 1023px) {
    .cover-heading{
       font-size: 110px;
    }
    #footer-btn {
-    margin-top: 2%;
+    margin-top: 4%;
   }
   #bold-text{
-    font-size: 16px;
+   font-size: 3vh;
   }
   #regular-text{
-    font-size:14px;
+    font-size:1em;
   }
   .footer-logo-corner p{
     font-size:14px;
@@ -438,9 +515,11 @@ body {
 .detail{
   background-color: white;
   font-family: 'Muli', sans-serif;
-  padding-bottom: 10%;
+  padding-bottom: 5%;
   position:relative;
   height:auto;
+  background-repeat: no-repeat;
+  background-image: url("assets/map-new.png")
 }
 
  img.map{
@@ -470,7 +549,6 @@ body {
   color: #3E4A58;
   font-weight:400;
   text-align: left;
-  font-size:1.2em;
   margin-bottom: 3%;
 }
 
@@ -480,11 +558,41 @@ body {
   margin:auto;
 }
 
-.detail span{
+
+#who-we-are {
+  padding-top: 15%;
+  margin-top: 4%;
+}
+
+
+.unite-text span{
   font-size: 64px;
   color: #36404C;
   font-weight:700;
   text-align:left;
+}
+
+.next-meetup{
+  text-align: left;
+  color: #36404C;
+}
+
+.next-meetup p{
+  display: inline-block;
+}
+
+#meetup-heading{
+  padding-right: 2%;
+  font-weight: 700;
+}
+
+#meetup-details{
+  vertical-align: middle;
+  padding-left: 3%;
+}
+
+.event-bar{
+  display: inline-block;
 }
 
 .header-bar{
@@ -496,14 +604,7 @@ body {
 /*--------------------*/
 
 
-.navbar{
-  background-color: #051220 !important;
-}
 
-.logo{
-  width:85px;
-  height:40px;
-}
 
 .blk-icons{
   width: 20%;
